@@ -6,10 +6,16 @@ const YogaRoutes = require('./routes/yogauser')
 const cors = require('cors');
 
 const app = express()
-app.use(cors({
-    origin:"http://localhost:4000"
-}));
 app.use(express.json())
+
+
+app.use((req, res, next) => {
+    console.log(req.path, req.method)
+    // res.setHeader("Access-Control-Allow-Credentials" , "true")
+    next()
+})
+app.use(cors());
+
 
 
 // app.use('/' , (req,res)=>{ res.setHeader("Access-Control-Allow-Credentials" , "true"); 
