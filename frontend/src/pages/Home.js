@@ -11,7 +11,7 @@ const Home = () => {
     const { users, dispatch } = useUsersContext()
     useEffect(() => {
         const fetchUsers = async () => {
-        const response = await fetch('https://mernbackend-poww.onrender.com/api/yogauser')
+        const response = await fetch('http://localhost:4000/api/yogauser')
         const json = await response.json()
 
         if (response.ok) {

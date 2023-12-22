@@ -18,7 +18,7 @@ const UserForm = () => {
 
         const user = {name, age, email, batch}
         
-        const response = await fetch('https://mernbackend-poww.onrender.com/api/yogauser', {
+        const response = await fetch('http://localhost:4000/api/yogauser', {
         method: 'POST',
         body: JSON.stringify(user),
         headers: {
